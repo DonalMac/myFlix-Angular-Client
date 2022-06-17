@@ -1,1 +1,33 @@
-<p>movie-card works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="movie-view" style="display: flex">
+  <mat-card *ngFor="let movie of movies; let i = index" style="flex: 1 1 auto">
+
+    <mat-card-header>
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image class="cardStyle" src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+    <mat-card-content>
+      Directed by: {{ movie.Director.Name }}
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button (click)="openDescriptionDialog(movie)" mat-button color="primary">
+        Movie Details
+      </button>
+
+      <button (click)="openGenreDialog(movie.Genre)" mat-button color="primary">
+        Genre
+      </button>
+      <button (click)="openDirectorDialog(movie.Director)" mat-button color="primary">
+        Director
+      </button>
+      <button class="bookMarkStyle" (click)="toggleFavorite(movie._id)" mat-button color="primary">
+        <mat-icon *ngIf="!isFavorite(movie._id)">bookmark_add</mat-icon>
+        <mat-icon *ngIf="isFavorite(movie._id)" color="warn">bookmark_remove</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

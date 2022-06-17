@@ -1,13 +1,11 @@
-<mat-card class="login-form">
+<mat-card class="login-dialog">
   <mat-card-header>
-    <mat-card-title class="login-form-title">
-      Login to your account
-    </mat-card-title>
+    <mat-card-title>Sign in to your MyFlix Account </mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <form>
       <mat-form-field>
-        <input matInput placeholder="Username" [(ngModel)]="userData.Name" type="text" name="Username" required />
+        <input matInput placeholder="Username" [(ngModel)]="userData.Name" type="text" name="Name" required />
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Password" [(ngModel)]="userData.Password" type="password" name="Password"
@@ -17,7 +15,7 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="loginUser()">
-      Sign Up
+      <mat-icon>login</mat-icon> Login
     </button>
   </mat-card-actions>
 </mat-card>
