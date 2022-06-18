@@ -1,4 +1,4 @@
-$specialBlueColor: #17a2b8;
+$specialBlueColor: #00333b;
 $textOnSpecialBlueColor: #ffffff;
 $backgroundColor: #fff;
 $buttonTextColor: #fff;
@@ -7,16 +7,12 @@ $textColor: #ffffff;
 $boxShadowColor: #104c5487;
 
 $backgroundColor: #f8f9fa;
-// $cardColor: #fff;
-// $textColor: #343a40;
-// $boxShadowColor: #e9ecef;
 
 .movie-view {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0;
   background-color: $backgroundColor;
 }
 
@@ -27,7 +23,7 @@ $backgroundColor: #f8f9fa;
   align-items: center;
   position: relative;
   box-shadow: 10px 5px 5px $boxShadowColor;
-  background-color: $cardColor;
+  background-color: $specialBlueColor;
   max-width: 280px;
   width: 280px;
   margin: 15px;
@@ -44,7 +40,7 @@ $backgroundColor: #f8f9fa;
 
 .mat-card-title {
   display: flex;
-  max-width: 210px;
+  max-width: 250px;
   justify-content: left;
   text-align: left;
   line-height: normal;
@@ -58,8 +54,8 @@ $backgroundColor: #f8f9fa;
 }
 
 img {
-  width: 250px;
-  height: 350px;
+  width: 264px;
+  height: 390px;
   object-fit: contain;
 }
 
@@ -67,6 +63,15 @@ img {
   position: absolute;
   right: 5px;
   top: 5px;
+}
+
+.mat-card-actions {
+  padding: 0px;
+  margin: 3px;
+}
+
+.GenreBtn {
+  width: 265px;
 }
 
 .bookMarkStyle {

@@ -1,6 +1,10 @@
-<div id="genre-container">
-  <p>
-    <b>Genre: {{ data.Genre.Name }}</b>
-  </p>
-  <p><b>Description:</b> <br />{{ data.Genre.Description }}</p>
-</div>
+<mat-card class="mainDiv">
+  <div class="DialogDiv">
+    <mat-card-title class="director-dialog-title">Genre: {{ data.Genre.Name }}</mat-card-title>
+  </div>
+  <div class="DialogDiv">
+    <mat-dialog-content>
+      <mat-dialog-content><b>Description:</b></mat-dialog-content> <br />{{ data.Genre.Description }}
+    </mat-dialog-content>
+  </div>
+</mat-card>

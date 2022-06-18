@@ -1,0 +1,17 @@
+$specialBlueColor: #00333b;
+
+.mainDiv {
+  background: rgb(24, 22, 22);
+  color: white;
+  border-radius: 1px;
+  padding: 2px;
+  margin: -15px;
+}
+
+.DialogDiv {
+  background: $specialBlueColor;
+  color: white;
+  border-radius: 1px;
+  padding: 30px;
+  margin: 3px;
+}

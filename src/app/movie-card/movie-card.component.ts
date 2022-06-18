@@ -88,20 +88,20 @@ export class MovieCardComponent implements OnInit {
 
   openGenreDialog(Genre: any): void {
     this.dialog.open(GenreComponent, {
-      width: '280px',
+      width: '400px',
       data: { Genre },
     });
   }
 
   openDirectorDialog(Director: any): void {
     this.dialog.open(DirectorComponent, {
-      width: '280px',
+      width: '400px',
       data: { Director },
     });
   }
   openDescriptionDialog(movie: any): void {
     this.dialog.open(DescriptionComponent, {
-      width: '280px',
+      width: '400px',
       data: { movie },
     });
   }

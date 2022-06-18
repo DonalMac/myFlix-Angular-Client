@@ -1,3 +1,12 @@
+$specialBlueColor: #00333b;
+$textOnSpecialBlueColor: #ffffff;
+$backgroundColor: #fff;
+$buttonTextColor: #fff;
+$textColor: #ffffff;
+$boxShadowColor: #104c5487;
+
+$backgroundColor: #f8f9fa;
+
 .navbar {
   justify-content: space-between;
   position: sticky;
@@ -8,8 +17,6 @@
   z-index: 1000;
   /* Ensure that your app's content doesn't overlap the toolbar */
   margin-bottom: 20px;
-}
-
-.logo {
-  padding-right: 1rem;
+  background: $specialBlueColor;
+  color: white;
 }

@@ -1,14 +1,6 @@
-// $specialBlueColor: #17a2b8;
-// $textOnSpecialBlueColor: #ffffff;
-// $backgroundColor: #fff;
-// $buttonTextColor: #fff;
 $cardColor: #17a3b8;
 $textColor: #ffffff;
-// $boxShadowColor: #3a6c7387;
-
-$backgroundColor: #f8f9fa;
-// $cardColor: #fff;
-// $textColor: #343a40;
+$backgroundColor: #00333b;
 $boxShadowColor: #e9ecef;
 
 .welcome-page {
@@ -26,7 +18,7 @@ $boxShadowColor: #e9ecef;
   padding: 30px;
   flex-direction: column;
   box-shadow: 10px 5px 5px $boxShadowColor;
-  background-color: $cardColor;
+  background-color: $backgroundColor;
 }
 
 .mat-card-header {

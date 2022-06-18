@@ -1,8 +1,18 @@
-<div id="director-container">
-  <p>
-    <b>Director: {{ data.Director.Name }}</b>
-  </p>
-  <p><b>Born:</b> {{ data.Director.Birth }}</p>
-  <p><b>Death:</b> {{ data.Director.Death }}</p>
-  <p><b>Bio:</b> <br />{{ data.Director.Bio }}</p>
-</div>
+<mat-card class="mainDiv">
+  <div class="DialogDiv">
+    <mat-card-title class="director-dialog-title">{{ data.Director.Name }}</mat-card-title>
+  </div>
+  <div class="DialogDiv">
+    <mat-dialog-content><b>Born:</b> {{ data.Director.Birth }}</mat-dialog-content>
+  </div>
+  <div class="DialogDiv">
+    <mat-dialog-content><b>Died:</b> {{ data.Director.Death }}</mat-dialog-content>
+  </div>
+  <div class="DialogDiv">
+    <mat-dialog-content><b>Biography:</b> <br />{{ data.Director.Bio }}</mat-dialog-content>
+  </div>
+
+
+
+
+</mat-card>

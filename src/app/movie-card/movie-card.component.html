@@ -8,26 +8,27 @@
     </mat-card-header>
 
     <img mat-card-image class="cardStyle" src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
-    <mat-card-content>
-      Directed by: {{ movie.Director.Name }}
-    </mat-card-content>
-
     <mat-card-actions>
-      <button (click)="openDescriptionDialog(movie)" mat-button color="primary">
-        Movie Details
-      </button>
-
-      <button (click)="openGenreDialog(movie.Genre)" mat-button color="primary">
-        Genre
-      </button>
-      <button (click)="openDirectorDialog(movie.Director)" mat-button color="primary">
-        Director
+      <button class="GenreBtn" mat-raised-button style="color:white; background:black; float: left;"
+        (click)="openDirectorDialog(movie.Director)">
+        {{ movie.Director.Name }}
       </button>
       <button class="bookMarkStyle" (click)="toggleFavorite(movie._id)" mat-button color="primary">
-        <mat-icon *ngIf="!isFavorite(movie._id)">bookmark_add</mat-icon>
-        <mat-icon *ngIf="isFavorite(movie._id)" color="warn">bookmark_remove</mat-icon>
+        <mat-icon *ngIf="!isFavorite(movie._id)">favorite_border</mat-icon>
+        <mat-icon *ngIf="isFavorite(movie._id)" color="warn">favorite</mat-icon>
       </button>
     </mat-card-actions>
+    <mat-card-actions>
+      <button class="GenreBtn" mat-raised-button style="color:white; background:black"
+        (click)="openGenreDialog(movie.Genre)">
+        {{ movie.Genre.Name }}
+      </button>
+    </mat-card-actions>
+    <mat-card-actions>
+      <button class="GenreBtn" (click)="openDescriptionDialog(movie)" mat-raised-button
+        style="color:white; background:black">
+        Synopsis
+      </button><br>
+    </mat-card-actions>
   </mat-card>
-
 </div>

@@ -1,4 +1,4 @@
-$specialBlueColor: #17a2b8;
+$specialBlueColor: #00333b;
 $textOnSpecialBlueColor: #ffffff;
 $backgroundColor: #fff;
 $buttonTextColor: #fff;
@@ -7,9 +7,6 @@ $textColor: #ffffff;
 $boxShadowColor: #104c5487;
 
 $backgroundColor: #f8f9fa;
-// $cardColor: #fff;
-// $textColor: #343a40;
-// $boxShadowColor: #e9ecef;
 
 .profileStyle {
   text-align: center;
@@ -26,16 +23,12 @@ mat-toolbar {
 
 .mat-card-title {
   font-size: 18px;
-  height: 55px;
+
 }
 
 .content>mat-card {
   margin-bottom: 16px;
   justify-content: center;
-}
-
-.mat-card-image {
-  height: 500px;
 }
 
 .column-label {
@@ -48,7 +41,6 @@ mat-toolbar {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0;
   background-color: $backgroundColor;
 }
 
@@ -59,7 +51,7 @@ mat-toolbar {
   align-items: center;
   position: relative;
   box-shadow: 10px 5px 5px $boxShadowColor;
-  background-color: $cardColor;
+  background-color: $specialBlueColor;
   max-width: 280px;
   width: 280px;
   margin: 15px;
@@ -68,7 +60,6 @@ mat-toolbar {
 }
 
 .mat-card-header {
-  height: 80px;
   display: flex;
   align-items: center;
   color: $textColor;
@@ -90,12 +81,20 @@ mat-toolbar {
 }
 
 img {
-  width: 250px;
-  height: 350px;
+  width: 264px;
+  height: 390px;
   object-fit: contain;
 }
 
+.mat-card-actions {
 
+  padding: 0px;
+  margin: 3px;
+}
+
+.GenreBtn {
+  width: 265px;
+}
 
 .bookMarkStyle {
   position: absolute;
