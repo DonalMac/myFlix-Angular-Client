@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Delete your Account</h1>
+<div mat-dialog-content>
+  By pressing <b>DELETE Account</b>, your Account will be deleted permanently!
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close>
+    No, Thanks!
+  </button>
+  <button mat-button mat-dialog-close color="warn" (click)="deleteUser()">
+    DELETE Account
+  </button>
+</div>
