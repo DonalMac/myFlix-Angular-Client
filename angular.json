@@ -100,10 +100,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
+  "defaultProject": "myFlix-Angular-client",
   "cli": {
     "analytics": false
   }
