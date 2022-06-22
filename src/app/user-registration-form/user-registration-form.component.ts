@@ -1,3 +1,9 @@
+/**
+ * Renders a registration form for users to make a new account.
+ * The user must supply a valid Username, Password, Email, and (optional) Birthday.
+ * @module UserRegistrationFormComponent
+ */
+
 import { Component, OnInit, Input } from '@angular/core';
 
 // This import brings in the API we'll use to register a user
@@ -15,6 +21,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./user-registration-form.component.scss'],
 })
 export class UserRegistrationFormComponent implements OnInit {
+  /**
+    * The input userData is empty strings by default.
+    * This is updated when the suer types into the form fields.
+    */
+
   @Input() userData = { Name: '', Password: '', Email: '', Birthday: '' };
 
   /**
@@ -32,11 +43,13 @@ export class UserRegistrationFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  // This is the function responsible for sending the form inputs to the backend
   /**
-   * Function responsible for sending the form inputs to the backend to create a new user
-   * @returns alert indicating successfull registration or an error message
-   */
+ * This is the function responsible for sending the form inputs to the backend
+ * Attempts to register the user with the input credentials.
+ * Uses [[FetchApiDataService.userRegistration]].
+ * Upon successful registration, the user can then log in.
+ * If registration fails, the user sees a snackbar dialog warning them that the credentials are invalid.
+ */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe(
       (response) => {

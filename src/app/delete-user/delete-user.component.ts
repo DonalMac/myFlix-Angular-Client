@@ -1,3 +1,8 @@
+/**
+ * Renders a form for users to delete their account permanently.
+ * @module DeleteUserComponent
+ */
+
 import { Component, OnInit } from '@angular/core';
 // This import brings in the API calls we created in 6.2
 import { FetchApiDataService } from '../fetch-api-data.service';
@@ -17,6 +22,13 @@ export class DeleteUserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void { }
+
+  /**
+   * Deletes the logged in users account. Uses a window.confirm to confirm that the user
+   * wants to delete their account.
+   * Deletes the account with [[FetchApiDataService.deleteUser]].
+   * Clears the localStorage and navigates to the welcome page.
+   */
 
   deleteUser(): void {
     this.router.navigate(['welcome']);

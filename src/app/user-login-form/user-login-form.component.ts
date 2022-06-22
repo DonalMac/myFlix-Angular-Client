@@ -1,7 +1,20 @@
+/**
+ * Renders a login form for users to enter their Username and Password.
+ * @module UserLoginFormComponent
+ */
+
 import { Component, OnInit, Input } from '@angular/core';
-import { FetchApiDataService } from '../fetch-api-data.service';
+
+// You'll use this import to close the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
+
+// This import brings in the API calls we created in 6.2
+import { FetchApiDataService } from '../fetch-api-data.service';
+
+// This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
+
+// This imorts the routing
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,6 +23,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-login-form.component.scss'],
 })
 export class UserLoginFormComponent implements OnInit {
+  /**
+     * The input userData is empty strings by default.
+     * This is updated when the user types into the form fields.
+     */
   @Input() userData = { Name: '', Password: '' };
 
   constructor(
@@ -22,7 +39,11 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void { }
 
   /**
-   * @description - This method is used to login the user and redirect to the dashboard/movies page
+   * This is the function responsible for sending the form inputs to the backend
+   * Attempts to log the user in with the input credentials.
+   * Uses [[FetchApiDataService.userLogin]].
+   * Saves Username and token in localStorage and redirects to `/movies` upon successful login.
+   * Gives a snackbar message if login fails.
    */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
